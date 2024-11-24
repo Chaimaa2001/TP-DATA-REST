@@ -2,10 +2,7 @@ package com.example.tpdatarest.models;
 
 import com.example.tpdatarest.enums.Genre;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @NoArgsConstructor @AllArgsConstructor @Data
@@ -22,6 +19,8 @@ public class Etudiant {
     @Enumerated(EnumType.STRING)
     private Genre genre;
     @ManyToOne
+    @NonNull
+    @JoinColumn(name = "centre_id")
     private Centre centre;
 
 }

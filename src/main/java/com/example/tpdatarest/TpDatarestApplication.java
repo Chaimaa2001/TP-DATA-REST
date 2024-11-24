@@ -28,16 +28,17 @@ public class TpDatarestApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         Centre c1=Centre.builder()
-                .Nom_Centre("EMSI MAARIF")
+                .nom("EMSI MAARIF")
                 .adresse("BIR ANZARAN")
-                .etudiants(null).build();
+                .listEtudiants(null).build();
+        centreRepository.save(c1);
 
         Centre c2=Centre.builder()
-                .Nom_Centre("EMSI ROUDANI")
+                .nom("EMSI ROUDANI")
                 .adresse("ROUDANI")
-                .etudiants(null).build();
+                .listEtudiants(null).build();
 
-        centreRepository.save(c1);
+
         centreRepository.save(c2);
 
         Etudiant et1=Etudiant.builder()
@@ -75,12 +76,12 @@ public class TpDatarestApplication implements CommandLineRunner {
         List<Etudiant>l1=new ArrayList<>();
         l1.add(et1);
         l1.add(et3);
-        c1.setEtudiants(l1);
+        c1.setListEtudiants(l1);
 
         List<Etudiant>l2=new ArrayList<>();
         l2.add(et2);
         l2.add(et4);
-        c2.setEtudiants(l2);
+        c2.setListEtudiants(l2);
 
         centreRepository.save(c1);
         centreRepository.save(c2);

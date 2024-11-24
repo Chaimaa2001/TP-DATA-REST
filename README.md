@@ -6,3 +6,8 @@
 <img src="IMAGES/img_5.png">
 <img src="IMAGES/img_6.png">
 <img src="IMAGES/img_7.png">
+<H3>PARTIE GRAPHQL</H3>
+<img src="IMAGES/img_8.png">
+<img src="IMAGES/img_9.png">
+<img src="IMAGES/img_10.png">
+<img src="IMAGES/img_11.png">

@@ -16,10 +16,10 @@ import java.util.List;
 public class Centre {
      @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String Nom_Centre;
+    private String nom;
     private String adresse;
-    @OneToMany(mappedBy = "centre",fetch = FetchType.LAZY)
-    List<Etudiant>etudiants;
+    @OneToMany(mappedBy = "centre")
+    List<Etudiant>listEtudiants;
 
 
 }
